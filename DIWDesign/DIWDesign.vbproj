@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2539AA75-AC25-43CB-B4BE-68D7137CE437}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>DIWDesign.My.MyApplication</StartupObject>
+    <RootNamespace>DIWDesign</RootNamespace>
+    <AssemblyName>DIWDesign</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DIWDesign.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DIWDesign.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Text</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Access\DBAccess.vb" />
+    <Compile Include="Access\GlobalModule.vb" />
+    <Compile Include="Access\Session.vb" />
+    <Compile Include="Admin\Applications\ProcessApplicationForm.Designer.vb">
+      <DependentUpon>ProcessApplicationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Applications\ProcessApplicationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Applications\ReviewApplicationForm.Designer.vb">
+      <DependentUpon>ReviewApplicationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Applications\ReviewApplicationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\DashboardForm.designer.vb">
+      <DependentUpon>DashboardForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DashboardForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Lease\ExistingLeaseForm.designer.vb">
+      <DependentUpon>ExistingLeaseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Lease\ExistingLeaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Lease\LeaseForm.designer.vb">
+      <DependentUpon>LeaseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Lease\LeaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Property\ExistingPropertyForm.designer.vb">
+      <DependentUpon>ExistingPropertyForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Property\ExistingPropertyForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Property\NewPropertyForm.designer.vb">
+      <DependentUpon>NewPropertyForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Property\NewPropertyForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Property\PropertyEmployeeForm.designer.vb">
+      <DependentUpon>PropertyEmployeeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Property\PropertyEmployeeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Reports.designer.vb">
+      <DependentUpon>Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerPaymentHistoryForm.designer.vb">
+      <DependentUpon>CustomerPaymentHistoryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerPaymentHistoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\ApplicationForm.designer.vb">
+      <DependentUpon>ApplicationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ApplicationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Bill\BillForm.Designer.vb">
+      <DependentUpon>BillForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bill\BillForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Bill\ExistingBillForm.Designer.vb">
+      <DependentUpon>ExistingBillForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bill\ExistingBillForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Bill\NewBillForm.Designer.vb">
+      <DependentUpon>NewBillForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bill\NewBillForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Customer\CustomerForm.designer.vb">
+      <DependentUpon>CustomerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customer\CustomerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Payment\ExistingPaymentForm.designer.vb">
+      <DependentUpon>ExistingPaymentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Payment\ExistingPaymentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Payment\NewPaymentForm.designer.vb">
+      <DependentUpon>NewPaymentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Payment\NewPaymentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Payment\PaymentForm.designer.vb">
+      <DependentUpon>PaymentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Payment\PaymentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerApplicationStatus.designer.vb">
+      <DependentUpon>CustomerApplicationStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerApplicationStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerHomeForm.designer.vb">
+      <DependentUpon>CustomerHomeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerHomeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerPageForm.Designer.vb">
+      <DependentUpon>CustomerPageForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerPageForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\Edit Profile.Designer.vb">
+      <DependentUpon>Edit Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Edit Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\ExistingCustomerProperties.Designer.vb">
+      <DependentUpon>ExistingCustomerProperties.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ExistingCustomerProperties.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\NewApplicationExistingCustomerForm.Designer.vb">
+      <DependentUpon>NewApplicationExistingCustomerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\NewApplicationExistingCustomerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\PropertyCustomerForm.designer.vb">
+      <DependentUpon>PropertyCustomerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\PropertyCustomerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Employee\EmployeeForm.designer.vb">
+      <DependentUpon>EmployeeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Employee\EmployeeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Employee\ExistingEmployeeForm.designer.vb">
+      <DependentUpon>ExistingEmployeeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Employee\ExistingEmployeeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\ForgotPasswordForm.Designer.vb">
+      <DependentUpon>ForgotPasswordForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\ForgotPasswordForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\LogInForm.Designer.vb">
+      <DependentUpon>LogInForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\LogInForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.designer.vb">
+      <DependentUpon>HomePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Admin\Customer\UpdateCustomerForm.designer.vb">
+      <DependentUpon>UpdateCustomerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customer\UpdateCustomerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Employee\NewEmployeeForm.designer.vb">
+      <DependentUpon>NewEmployeeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Employee\NewEmployeeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MyProfile.designer.vb">
+      <DependentUpon>MyProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MyProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\Applications\ProcessApplicationForm.resx">
+      <DependentUpon>ProcessApplicationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Applications\ReviewApplicationForm.resx">
+      <DependentUpon>ReviewApplicationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\DashboardForm.resx">
+      <DependentUpon>DashboardForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Lease\ExistingLeaseForm.resx">
+      <DependentUpon>ExistingLeaseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Lease\LeaseForm.resx">
+      <DependentUpon>LeaseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Property\ExistingPropertyForm.resx">
+      <DependentUpon>ExistingPropertyForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Property\NewPropertyForm.resx">
+      <DependentUpon>NewPropertyForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Property\PropertyEmployeeForm.resx">
+      <DependentUpon>PropertyEmployeeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Reports.resx">
+      <DependentUpon>Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerPaymentHistoryForm.resx">
+      <DependentUpon>CustomerPaymentHistoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\ApplicationForm.resx">
+      <DependentUpon>ApplicationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Bill\BillForm.resx">
+      <DependentUpon>BillForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Bill\ExistingBillForm.resx">
+      <DependentUpon>ExistingBillForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Bill\NewBillForm.resx">
+      <DependentUpon>NewBillForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Customer\CustomerForm.resx">
+      <DependentUpon>CustomerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Payment\ExistingPaymentForm.resx">
+      <DependentUpon>ExistingPaymentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Payment\NewPaymentForm.resx">
+      <DependentUpon>NewPaymentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Payment\PaymentForm.resx">
+      <DependentUpon>PaymentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerApplicationStatus.resx">
+      <DependentUpon>CustomerApplicationStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerHomeForm.resx">
+      <DependentUpon>CustomerHomeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerPageForm.resx">
+      <DependentUpon>CustomerPageForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\Edit Profile.resx">
+      <DependentUpon>Edit Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\ExistingCustomerProperties.resx">
+      <DependentUpon>ExistingCustomerProperties.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\NewApplicationExistingCustomerForm.resx">
+      <DependentUpon>NewApplicationExistingCustomerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\PropertyCustomerForm.resx">
+      <DependentUpon>PropertyCustomerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Employee\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Employee\ExistingEmployeeForm.resx">
+      <DependentUpon>ExistingEmployeeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\ForgotPasswordForm.resx">
+      <DependentUpon>ForgotPasswordForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\LogInForm.resx">
+      <DependentUpon>LogInForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Customer\UpdateCustomerForm.resx">
+      <DependentUpon>UpdateCustomerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Employee\NewEmployeeForm.resx">
+      <DependentUpon>NewEmployeeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MyProfile.resx">
+      <DependentUpon>MyProfile.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\EnV-Chicago-Home-Slider-Living-Room.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DIW %282%29.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MicrosoftTeams-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\building.png" />
+    <None Include="Resources\businessman.png" />
+    <Content Include="Resources\customer.png" />
+    <Content Include="Resources\debit-card.png" />
+    <Content Include="Resources\employee1.png" />
+    <None Include="Resources\excel.png" />
+    <Content Include="Resources\form.png" />
+    <Content Include="Resources\invoices.png" />
+    <Content Include="Resources\lease.png" />
+    <Content Include="Resources\seo-report.png" />
+    <Content Include="Resources\seo-report1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

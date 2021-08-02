@@ -6,3 +6,6 @@ The functionalities of this system include:
 - Lease Aplication
 - Bill & Payment 
 - Reporting.
+
+
+Note: The database linked to this project was hosted on a local database server and unfortunately i do not have access to that server on GitHub. 
